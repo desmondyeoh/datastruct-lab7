@@ -93,7 +93,7 @@ public class Lab6lol {
             }
             return found;
         }
-        //(if(A==B) { return true };
+        
         public void replace(E e, E newE) {
             Node<E> current = head;
             while(current!=null) {
