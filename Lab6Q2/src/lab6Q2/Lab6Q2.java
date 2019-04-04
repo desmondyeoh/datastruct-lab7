@@ -48,17 +48,25 @@ public class Lab6lol {
         
         public void removeElement(E e) {
             Node<E> previous = head;      
-            for(int i=1; i < size; i++) {
-                if(previous.next.element.equals(e) || head.element.equals(e)){
-                    if(head.element.equals(e)) {
-                        head = previous.next;
-                    }
+            
+            if(head.element.equals(e)) {
+                head=previous.next;
+                size--;
+            }
+            
+            else {
+                for(int i=1; i < size; i++) {
+                if(previous.next.element.equals(e)){
                     Node<E> current = previous.next;
                     previous.next=current.next;
                     size--;
+                    if((i-1)==(size-1)) {
+                        tail=previous;
+                    }
                 }
                 previous=previous.next;
             }
+        }
         }
         
         public void printList() {
