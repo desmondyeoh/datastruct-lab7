@@ -65,7 +65,7 @@ public class Lab6lol {
             Node<E> current = head;
             while(current!=null) {
                 System.out.print(current.element + ", ");
-                current = current.next;
+                current.next = current;
             }
         }
         
