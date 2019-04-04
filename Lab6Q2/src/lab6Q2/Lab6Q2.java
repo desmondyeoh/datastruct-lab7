@@ -60,6 +60,7 @@ public class Lab6lol {
                     Node<E> current = previous.next;
                     previous.next=current.next;
                     size--;
+                    //To reassign the tail if the element removed is at the last node
                     if((i-1)==(size-1)) {
                         tail=previous;
                     }
